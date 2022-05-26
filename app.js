@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
+const swaggerJson = require("./swagger.json");
+const swaggerUI = require("swagger-ui-express");
 
 var corsOptions = {
   origin: "http://localhost:8081"
@@ -18,6 +20,8 @@ const db = require("./app/models");
 db.client.sync();
 
 require("./app/routes/player.routes")(app);
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerJson));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
