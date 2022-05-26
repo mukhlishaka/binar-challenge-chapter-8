@@ -1,0 +1,42 @@
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px
+}
+
+.table td, .table thead tr {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table thead tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.search {
+    display: flex;
+    margin: 20px;
+}
+
+tbody td .edit {
+    background-color: #04AA6D;
+    color: white;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+tbody td .delete {
+    background-color: #e41414;
+    color: white;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
