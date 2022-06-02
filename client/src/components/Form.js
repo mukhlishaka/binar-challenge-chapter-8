@@ -10,15 +10,15 @@ function Form(props) {
     const [lvl, setLvl] = useState("");
 
     useEffect(() => {
-        if (props.formPlayer) {
-            setId(props.formPlayer.id);
-            setUsername(props.formPlayer.username);
-            setEmail(props.formPlayer.email);
-            setPassword(props.formPlayer.password);
-            setExperience(props.formPlayer.experience);
-            setLvl(props.formPlayer.lvl);
+        if (props.form) {
+            setId(props.form.id);
+            setUsername(props.form.username);
+            setEmail(props.form.email);
+            setPassword(props.form.password);
+            setExperience(props.form.experience);
+            setLvl(props.form.lvl);
         }
-    }, [props.formPlayer]);
+    }, [props.form]);
 
     const usernameHandle = (event) => setUsername(event.target.value);
     const emailHandle = (event) => setEmail(event.target.value);
